@@ -58,6 +58,17 @@ def sqrt(x):
         guess = (guess + x / guess) / 2
 
     return guess
+
+def exp(x):
+    result = 1.0
+    term = 1.0  # primer término
+
+    for i in range(1, 15):  # 15 iteraciones = buena precisión
+        term = term * x / i
+        result += term
+
+    return result
+    
 # ===== RUN TESTS =====
 
 def run_tests():
