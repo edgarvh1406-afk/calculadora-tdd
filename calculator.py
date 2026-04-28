@@ -15,6 +15,13 @@ def test_subtract():
 def test_divide():
     assert divide(6, 3) == 2
     assert divide(5, 2) == 2.5
+
+def test_sqrt():
+    result = sqrt(9)
+    assert abs(result - 3) < 0.001
+
+    result = sqrt(16)
+    assert abs(result - 4) < 0.001
     
 # ===== IMPLEMENTACIÓN =====
 
@@ -39,5 +46,6 @@ def run_tests():
     test_subtract()
     test_multiply()
     test_divide()
+    test_sqrt()
     print("All tests passed!")
 run_tests()
