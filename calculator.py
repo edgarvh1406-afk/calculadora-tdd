@@ -11,6 +11,10 @@ def test_add():
 def test_subtract():
     assert subtract(5, 3) == 2
     assert subtract(0, 5) == -5
+
+def test_divide():
+    assert divide(6, 3) == 2
+    assert divide(5, 2) == 2.5
     
 # ===== IMPLEMENTACIÓN =====
 
@@ -29,5 +33,6 @@ def run_tests():
     test_add()
     test_subtract()
     test_multiply()
+    test_divide()
     print("All tests passed!")
 run_tests()
