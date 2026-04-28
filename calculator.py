@@ -27,6 +27,11 @@ def multiply(a, b):
 def add(a, b):
     return a + b
 
+def divide(a, b):
+    if b == 0:
+        raise ValueError("No se puede dividir entre cero")
+    return a / b
+
 # ===== RUN TESTS =====
 
 def run_tests():
