@@ -22,6 +22,13 @@ def test_sqrt():
 
     result = sqrt(16)
     assert abs(result - 4) < 0.001
+
+def test_exp():
+    result = exp(1)
+    assert abs(result - 2.718) < 0.01
+
+    result = exp(0)
+    assert abs(result - 1) < 0.001
     
 # ===== IMPLEMENTACIÓN =====
 
@@ -59,5 +66,6 @@ def run_tests():
     test_multiply()
     test_divide()
     test_sqrt()
+    test_exp()
     print("All tests passed!")
 run_tests()
