@@ -39,6 +39,18 @@ def divide(a, b):
         raise ValueError("No se puede dividir entre cero")
     return a / b
 
+def sqrt(x):
+    if x < 0:
+        raise ValueError("No se puede calcular raíz de número negativo")
+
+    guess = x / 2 if x != 0 else 0.0
+
+    for _ in range(10):  # iteraciones suficientes para precisión
+        if guess == 0:
+            return 0
+        guess = (guess + x / guess) / 2
+
+    return guess
 # ===== RUN TESTS =====
 
 def run_tests():
